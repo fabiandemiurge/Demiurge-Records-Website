@@ -11,6 +11,7 @@ html {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
+    box-sizing: border-box;
 }
 
 /* ids .*/
@@ -132,8 +133,8 @@ padding: 2rem;
     color: rgba(234, 240, 246, 0);
 }
 
-.clickable-img:hover {
-    color: rgba(234, 240, 246, 0);
+.clickable-img p{
+    display: none;
 }
 
 .formulario {
@@ -142,6 +143,10 @@ padding: 2rem;
 
 .form-control {
     height: 4rem;
+}
+
+.banner-img {
+    max-width: 100%;
 }
 
 
@@ -159,6 +164,7 @@ padding: 2rem;
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-size: 2rem;
+        box-sizing: border-box;
     }
     
     /* ids .*/
@@ -280,5 +286,9 @@ padding: 2rem;
 
     .form-control {
         height: 4rem;
+    }
+
+    .banner-img {
+        max-width: 100%;
     }
 }
