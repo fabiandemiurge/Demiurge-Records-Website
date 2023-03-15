@@ -1,0 +1,315 @@
+@import "partials/variables";
+
+/*Mobile first*/
+
+html {
+    font-size: 62.5%;
+}
+
+/*Reset*/
+
+@mixin css-reset($margin, $padding, $text-decoration, $font-family, $font-size, $box-sizing){
+    margin: $margin;
+    padding: $padding;
+    text-decoration: $text-decoration;
+    font-family: $font-family;
+    font-size: $font-size;
+    box-sizing: $box-sizing;
+}
+
+* {
+    @include css-reset(0, 0, none, $dr-font, 0.8rem, border-box)
+}
+
+/*IDS*/
+
+#footer {
+    text-align: center;
+    color: gray;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
+/*Etiquetas*/
+
+a {
+    color: black;
+        &:hover{
+            color:gray;
+        }
+}
+
+button {
+    background-color: yellow;
+    padding: 1rem;
+    border-radius: 8px;
+    border-style: none;
+    font-weight: bold;
+        &:hover{
+            background-color: gray;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+}
+
+li {
+    text-decoration: none;
+    display: inline;
+    margin: 1rem;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*Clases*/
+
+.separator-bar {
+    border-top: 5px solid yellow;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    width: 15%;
+    margin: auto;
+}
+
+
+@mixin text-titles($size, $weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.titles {
+@include text-titles(1.7rem, bold)
+}
+
+.seccion {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.selected-page {
+    font-weight: bold;
+}
+
+.navbar {
+background-color: white;
+padding: 2rem;
+}
+
+.navbar-toggler{
+    border: none;
+        &:hover{
+            background-color: white;
+        }
+        &:focus{
+            background-color: white;
+            box-shadow: none;
+        }
+}
+
+.navbar-toggler-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav-link{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.navbar-nav {
+    position: end;
+}
+
+.card {
+    border: none;
+}
+
+.clickable-img {
+    color: rgba(234, 240, 246, 0);
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+}
+
+.clickable-img p{
+    display: none;
+}
+
+.formulario {
+    text-align: left;
+}
+
+.form-control {
+    height: 4rem;
+}
+
+.banner-img {
+    max-width: 100%;
+}
+
+.scale{
+    transition: all 0.5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+}
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 62.5%;
+    }
+    
+    /*Reset*/
+
+    * {
+        @include css-reset(0, 0, none, $dr-font, 2rem, border-box)
+    }
+    
+    /*IDS*/
+    #footer {
+        text-align: center;
+        color: gray;
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+    }
+    
+    #grid_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    
+    /* etiqueta .*/
+    a {
+        color: black;
+            &:hover{
+                color: gray;
+            }
+    }
+    
+    button {
+        background-color: yellow;
+        padding: 2rem;
+        border-radius: 8px;
+        border-style: none;
+        font-weight: bold;
+            &:hover{
+                background-color: gray;
+                color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+    }
+    
+    li {
+        text-decoration: none;
+        display: inline;
+        margin: 1rem;
+    }
+    
+    header {
+        position: sticky;
+        top: 0px;
+        width: 100vw;
+        grid-area: header;
+    }
+    
+    main{
+        grid-area: main;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    /*Clases*/
+    .separator-bar {
+        border-top: 10px solid yellow;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        width: 20%;
+        margin: auto;
+    }
+    
+    .titles {
+    @include text-titles(3rem, bold)
+    }
+    
+    .seccion {
+        text-align: center;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+    
+    .selected-page {
+        font-weight: bold;
+    }
+
+    .navbar {
+        background-color: white;
+        padding: 4rem;
+        }
+
+    .nav-link{
+        font-size: 2rem;
+    }
+
+    .navbar-nav {
+        position: end;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .clickable-img {
+        color: rgba(234, 240, 246, 0);
+            &:hover{
+                color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+    }
+
+    .formulario {
+        text-align: left;
+    }
+
+    .form-control {
+        height: 4rem;
+    }
+
+    .banner-img {
+        max-width: 100%;
+    }
+
+    .scale{
+        transition: all 0.5s;
+            &:hover{
+                transform: scale(1.2);
+            }
+    }
+}
