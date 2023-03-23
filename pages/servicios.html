@@ -39,16 +39,16 @@
 
                 <a class="navbar-brand" href="../index.html"><img src="../img/LOGO HORIZONTAL .png" alt="Logo" height="28" class="d-inline-block align-text-top"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
                     <div class="navbar-nav">
 
-                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
-                        <a class="nav-link active selected-page" aria-current="page" href="./servicios.html">Servicios</a>
+                        <a class="nav-link active selected-page" href="./servicios.html">Servicios</a>
                         <a class="nav-link" href="./proyectos.html">Proyectos</a>
                         <a class="nav-link" href="./contacto.html">Contacto</a>
 
@@ -62,6 +62,13 @@
 
         </header>
 
+        <!--BANNER-->
+
+        <div class="page-banner"><h1 class="titles">SERVICIOS</h1></div>
+
+        <br><br>
+
+        <!--MAIN-->
         <main>
             
             <section class="seccion">
@@ -70,16 +77,12 @@
 
                     <div class="container">
 
-                        <h1 class="titles">SERVICIOS</h1>
-                        
-                        <br><br><hr class="separator-bar"><br><br><br>
-
-                        <div class="row container">
+                        <div class="row container services-grid">
 
                             <div class="col">
 
                                 <div class="card">
-                                    <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="Imagen de una consola de audio">
+                                    <img src="https://images.unsplash.com/photo-1626126525134-fbbc07afb32c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="Imagen de una consola de audio">
                                     <div class="card-body">
                                     <p class="card-text titles">EDICIÓN</p>
                                     </div>
@@ -90,7 +93,7 @@
                             <div class="col">
 
                                 <div class="card">
-                                    <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="...">
+                                    <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="Foto de la mesa de un studio">
                                     <div class="card-body">
                                     <p class="card-text titles">MEZCLA</p>
                                     </div>
@@ -101,7 +104,7 @@
                             <div class="col">
 
                                 <div class="card">
-                                    <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="...">
+                                    <img src="https://images.unsplash.com/photo-1563330232-57114bb0823c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" class="card-img-top" alt="Persona en un studio mirando el monitor">
                                     <div class="card-body">
                                     <p class="card-text titles">MASTERING</p>
                                     </div>
@@ -127,12 +130,68 @@
             
         </main>
 
+        <br><br>
+
+        <!--FOOTER-->
         <footer>
 
             <div id="footer">
-                <p>Demiurge Records 2023 © Todos los derechos reservados.</p>
-            </div>
+                
+                <div class="container text-center text-md-start mt-5">
+                
+                    <!--FILA-->
+                    <div class="row mt-3">
 
+                        <!--COLUMNA 1, LOGO-->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                            <img class="about-img" src="../img/LOGO CUADRADO 1.1.png" alt="Isotipo de Demiurge Records">
+
+                        </div>
+                
+                        <!--COLUMNA 2, SITIO-->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">SITIO</h6>
+                            <p><a href="./sobreNosotros.html" class="text-reset">Sobre nosotros</a></p>
+                            <p><a href="./servicios.html" class="text-reset">Servicios</a></p>
+                            <p><a href="./proyectos.html" class="text-reset">Proyectos</a></p>
+                            <p><a href="./contacto.html" class="text-reset">Contacto</a></p>
+
+                        </div>
+                
+                        <!--COLUMNA 3, REDES-->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">NUESTRAS REDES</h6>
+                            <p><a href="https://www.facebook.com/DemiurgeRecords/" class="text-reset">Facebook</a></p>
+                            <p><a href="https://www.instagram.com/demiurgerecords/" class="text-reset">Instagram</a></p>
+                            <p><a href="https://www.youtube.com/DemiurgeRecords" class="text-reset">YouTube</a></p>
+                            <p><a href="https://soundcloud.com/DemiurgeRecords" class="text-reset">SoundCloud</a></p>
+
+                        </div>
+                
+                        <!--COLUMNA 4, CONTACTO-->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">CONTACTO</h6>
+                            <p><i class="fas fa-home me-3"></i>Santiago, Chile</p>
+                            <p><i class="fas fa-home me-3"></i>+56 9 9847 5716</p>
+                            <p><i class="fas fa-envelope me-3"></i>demiurge.records@outlook.com</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--COPYRIGHT-->
+                <br><div class="text-center p-4">
+                    Demiurge Records 2023 © Todos los derechos reservados.
+                </div>
+
+            </div>
+        
         </footer>
 
     </div>

@@ -18,7 +18,7 @@ html {
 }
 
 * {
-    @include css-reset(0, 0, none, $dr-font, 0.8rem, border-box)
+    @include css-reset(0, 0, none, $dr-font, 1rem, border-box)
 }
 
 /*IDS*/
@@ -26,13 +26,15 @@ html {
 #footer {
     text-align: center;
     color: gray;
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    background-color: #f8f8f8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /*Etiquetas*/
 
 a {
+    text-decoration: none;
     color: black;
         &:hover{
             color:gray;
@@ -40,7 +42,7 @@ a {
 }
 
 button {
-    background-color: yellow;
+    background-color: #f5e54d;
     padding: 1rem;
     border-radius: 8px;
     border-style: none;
@@ -63,6 +65,8 @@ header {
     top: 0px;
     width: 100vw;
     grid-area: header;
+    max-width: 100%;
+    z-index: 1;
 }
 
 main{
@@ -76,12 +80,14 @@ footer {
 /*Clases*/
 
 .separator-bar {
-    border-top: 5px solid yellow;
+    border-top: 5px solid #f5e54d;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
-    width: 15%;
+    width: 30%;
     margin: auto;
+    opacity: 100%;
+
 }
 
 
@@ -92,6 +98,25 @@ footer {
 
 .titles {
 @include text-titles(1.7rem, bold)
+}
+
+.titles-sn{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.logo-sn{
+    padding-bottom: 2rem;
+}
+
+.img-contact{
+    padding-top: 2rem;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
 }
 
 .seccion {
@@ -129,7 +154,7 @@ padding: 2rem;
 
 .nav-link{
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .navbar-nav {
@@ -145,10 +170,6 @@ padding: 2rem;
         &:hover{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-}
-
-.clickable-img p{
-    display: none;
 }
 
 .formulario {
@@ -170,6 +191,40 @@ padding: 2rem;
         }
 }
 
+.about-img{
+    width: 30%;
+}
+
+.page-banner {
+    background-image: url(../img/PAGE-BANNER.jpg);
+    height: 10rem;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    color: white;
+}
+
+.artist-section{
+    text-align: center;
+}
+
+.releases-carrousel{
+    background-color: #f8f8f8;
+}
+
+.carrousel-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.services-grid{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
 /*Desktop view*/
 @media screen and (min-width: 768px) {
 
@@ -180,15 +235,16 @@ padding: 2rem;
     /*Reset*/
 
     * {
-        @include css-reset(0, 0, none, $dr-font, 2rem, border-box)
+        @include css-reset(0, 0, none, $dr-font, 1.7rem, border-box)
     }
     
     /*IDS*/
     #footer {
         text-align: center;
         color: gray;
-        padding-top: 7rem;
-        padding-bottom: 4rem;
+        background-color: #f8f8f8;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     
     #grid_container{
@@ -203,6 +259,7 @@ padding: 2rem;
     
     /* etiqueta .*/
     a {
+        text-decoration: none;
         color: black;
             &:hover{
                 color: gray;
@@ -210,11 +267,12 @@ padding: 2rem;
     }
     
     button {
-        background-color: yellow;
-        padding: 2rem;
+        background-color: #f5e54d;
+        padding: 1.7rem;
         border-radius: 8px;
         border-style: none;
         font-weight: bold;
+        font-size: 1.5rem;
             &:hover{
                 background-color: gray;
                 color: white;
@@ -233,6 +291,7 @@ padding: 2rem;
         top: 0px;
         width: 100vw;
         grid-area: header;
+        max-width: 100%;
     }
     
     main{
@@ -245,24 +304,38 @@ padding: 2rem;
     
     /*Clases*/
     .separator-bar {
-        border-top: 10px solid yellow;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 0;
+        border-top: 10px solid #f5e54d;
         width: 20%;
-        margin: auto;
+        opacity: 100%;
+
     }
     
     .titles {
-    @include text-titles(3rem, bold)
+    @include text-titles(2.5rem, bold)
+    }
+
+    .titles-sn{
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .logo-sn{
+        padding-bottom: 0;
+    }
+
+    .img-contact{
+        padding-top: 0;
     }
     
+    .btn-form{
+        display: flex;
+        justify-content: left;
+    }
+
     .seccion {
         text-align: center;
-        padding-top: 7rem;
-        padding-bottom: 7rem;
-        padding-left: 15rem;
-        padding-right: 15rem;
+        padding: 7rem 15rem;
     }
     
     .selected-page {
@@ -275,11 +348,12 @@ padding: 2rem;
         }
 
     .nav-link{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .navbar-nav {
-        position: end;
+        display: flex;
+        justify-content: space-between;
     }
 
     .card {
@@ -309,7 +383,38 @@ padding: 2rem;
     .scale{
         transition: all 0.5s;
             &:hover{
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
+    }
+
+    .about-img{
+        width: 50%;
+    }
+
+    .page-banner {
+        background-image: url(../img/PAGE-BANNER.jpg);
+        height: 20rem;
+        display: grid;
+        text-align: center;
+        align-items: center;
+        width: 100vw;
+        max-width: 100%;
+        color: white;
+    }
+
+    .artist-section{
+        text-align: center;
+    }
+
+    .releases-carrousel{
+        background-color: #f8f8f8;
+    }
+
+    .carrousel-grid{
+        display: flex;
+    }
+
+    .services-grid{
+        display: flex;
     }
 }

@@ -9,7 +9,7 @@ html {
   padding: 0;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
@@ -17,12 +17,14 @@ html {
 #footer {
   text-align: center;
   color: gray;
-  padding-top: 7rem;
-  padding-bottom: 4rem;
+  background-color: #f8f8f8;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*Etiquetas*/
 a {
+  text-decoration: none;
   color: black;
 }
 a:hover {
@@ -30,7 +32,7 @@ a:hover {
 }
 
 button {
-  background-color: yellow;
+  background-color: #f5e54d;
   padding: 1rem;
   border-radius: 8px;
   border-style: none;
@@ -53,6 +55,8 @@ header {
   top: 0px;
   width: 100vw;
   grid-area: header;
+  max-width: 100%;
+  z-index: 1;
 }
 
 main {
@@ -65,17 +69,37 @@ footer {
 
 /*Clases*/
 .separator-bar {
-  border-top: 5px solid yellow;
+  border-top: 5px solid #f5e54d;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  width: 15%;
+  width: 30%;
   margin: auto;
+  opacity: 100%;
 }
 
 .titles {
   font-size: 1.7rem;
   font-weight: bold;
+}
+
+.titles-sn {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.logo-sn {
+  padding-bottom: 2rem;
+}
+
+.img-contact {
+  padding-top: 2rem;
+}
+
+.btn-form {
+  display: flex;
+  justify-content: center;
 }
 
 .seccion {
@@ -113,7 +137,7 @@ footer {
 
 .nav-link {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .navbar-nav {
@@ -129,10 +153,6 @@ footer {
 }
 .clickable-img:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.clickable-img p {
-  display: none;
 }
 
 .formulario {
@@ -154,6 +174,40 @@ footer {
   transform: scale(1.2);
 }
 
+.about-img {
+  width: 30%;
+}
+
+.page-banner {
+  background-image: url(../img/PAGE-BANNER.jpg);
+  height: 10rem;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  color: white;
+}
+
+.artist-section {
+  text-align: center;
+}
+
+.releases-carrousel {
+  background-color: #f8f8f8;
+}
+
+.carrousel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
 /*Desktop view*/
 @media screen and (min-width: 768px) {
   html {
@@ -165,15 +219,16 @@ footer {
     padding: 0;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     box-sizing: border-box;
   }
   /*IDS*/
   #footer {
     text-align: center;
     color: gray;
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    background-color: #f8f8f8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   #grid_container {
     display: grid;
@@ -183,17 +238,19 @@ footer {
   }
   /* etiqueta .*/
   a {
+    text-decoration: none;
     color: black;
   }
   a:hover {
     color: gray;
   }
   button {
-    background-color: yellow;
-    padding: 2rem;
+    background-color: #f5e54d;
+    padding: 1.7rem;
     border-radius: 8px;
     border-style: none;
     font-weight: bold;
+    font-size: 1.5rem;
   }
   button:hover {
     background-color: gray;
@@ -210,6 +267,7 @@ footer {
     top: 0px;
     width: 100vw;
     grid-area: header;
+    max-width: 100%;
   }
   main {
     grid-area: main;
@@ -219,23 +277,32 @@ footer {
   }
   /*Clases*/
   .separator-bar {
-    border-top: 10px solid yellow;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    border-top: 10px solid #f5e54d;
     width: 20%;
-    margin: auto;
+    opacity: 100%;
   }
   .titles {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
+  }
+  .titles-sn {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .logo-sn {
+    padding-bottom: 0;
+  }
+  .img-contact {
+    padding-top: 0;
+  }
+  .btn-form {
+    display: flex;
+    justify-content: left;
   }
   .seccion {
     text-align: center;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding: 7rem 15rem;
   }
   .selected-page {
     font-weight: bold;
@@ -245,10 +312,11 @@ footer {
     padding: 4rem;
   }
   .nav-link {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .navbar-nav {
-    position: end;
+    display: flex;
+    justify-content: space-between;
   }
   .card {
     border: none;
@@ -273,7 +341,32 @@ footer {
     transition: all 0.5s;
   }
   .scale:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+  .about-img {
+    width: 50%;
+  }
+  .page-banner {
+    background-image: url(../img/PAGE-BANNER.jpg);
+    height: 20rem;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    color: white;
+  }
+  .artist-section {
+    text-align: center;
+  }
+  .releases-carrousel {
+    background-color: #f8f8f8;
+  }
+  .carrousel-grid {
+    display: flex;
+  }
+  .services-grid {
+    display: flex;
   }
 }
 

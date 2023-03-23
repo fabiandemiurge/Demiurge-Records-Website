@@ -39,17 +39,17 @@
 
                 <a class="navbar-brand" href="../index.html"><img src="../img/LOGO HORIZONTAL .png" alt="Logo" height="28" class="d-inline-block align-text-top"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
                     <div class="navbar-nav">
 
-                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         <a class="nav-link" href="./sobreNosotros.html">Sobre nosotros</a>
                         <a class="nav-link" href="./servicios.html">Servicios</a>
-                        <a class="nav-link active selected-page" aria-current="page" href="./proyectos.html">Proyectos</a>
+                        <a class="nav-link active selected-page" href="./proyectos.html">Proyectos</a>
                         <a class="nav-link" href="./contacto.html">Contacto</a>
 
                     </div>
@@ -62,81 +62,138 @@
 
         </header>
 
+        <!--BANNER-->
+
+        <div class="page-banner"><h1 class="titles">PROYECTOS</h1></div>
+
         <!--MAIN-->
         <main>
 
-            <section class="seccion">
+            <!--RELEASES CARROUSEL-->
+            <section class="seccion releases-carrousel">
 
                 <article>
 
-                    <h1 class="titles">PROYECTOS</h1>
-                        
-                        <br><br><hr class="separator-bar"><br><br>
+                    <br><br>
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam explicabo, doloremque exercitationem praesentium, excepturi dolore nesciunt tempore maiores sunt nobis officiis labore quod nam rerum eius at sit quos.</p>
+                    <p>Echa un vistazo a los últimos lanzamientos de nuestros artistas.</p>
 
-                        <br><br>
+                    <br><br>
 
-                    <div class="row">
+                    <div class="container">
 
-                        <div class="col">
+                        <div class="row gx-5 gy-5 carrousel-grid">
 
-                            <div class="card text-bg-dark">
-                                <a href="" class="clickable-img scale">
-                                <img src="https://i.scdn.co/image/ab67616d0000b27330dc8425cd185efd935a02d4" class="card-img" alt="Portada del disco Entre árboles y frecuencias de la banda Enlaces">
-                                <div class="card-img-overlay">
-                                <p class="card-text">Enlaces</p>
-                                <p class="card-text"><small>Entre árboles y frecuencias</small></p>
-                                <p class="card-text"><small>Diciembre, 2021</small></p>
+                            <div class="col-sm-3">
+    
+                                <div class="card text-bg-dark">
+
+                                    <a href="https://open.spotify.com/track/2WNwWJawbK175S9b5DlH6e?si=03810324cfda4d56" class="clickable-img scale">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b2738164f10c2635a05665f86e1c" class="card-img" alt="Portada del single 'Frío' de Jimmygang"></a>
+
                                 </div>
-                                </a>
+                                
+                            </div>
+    
+                            <div class="col-sm-3">
+    
+                                <div class="card text-bg-dark">
+
+                                    <a href="https://open.spotify.com/track/2tBxRtFOmjvcA7kfrPJpY1?si=d72e7f1bed9c4d5f" class="clickable-img scale">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b27369d3224039a5bf33cb6a18a8" class="card-img" alt="Portada del single 'The Alchemist' de Rebirth The Aeons"></a>
+
+                                </div>
+
+                            </div>
+    
+                            <div class="col-sm-3">
+    
+                                <div class="card text-bg-dark">
+
+                                    <a href="https://open.spotify.com/album/3y0ck2AcUj7pYkG6eqlTX4?si=lZw0DpYHRgWnh5AeJ5vISg" class="clickable-img scale">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b27330dc8425cd185efd935a02d4" class="card-img" alt="Portada del EP 'Entre árboles y frecuencias' de Enlaces"></a>
+
+                                </div>
+                                
+                            </div>
+    
+                            <div class="col-sm-3">
+    
+                                <div class="card text-bg-dark">
+
+                                    <a href="https://open.spotify.com/track/1kcznRMIOrS4NJqG26iHLr?si=162722450bc7499d" class="clickable-img scale">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b2731fe62e16894c69adb554b812" class="card-img" alt="Portada del single 'Inconsciencia Colectiva' de Resistencia"></a>
+
+                                </div>
+                                
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    <br><br>
+
+                </article>
+
+            </section>
+            
+            <br><br>
+
+            <!--ARTISTS-->
+            <section class="artist-section">
+
+                <article>
+
+                    <br><br>
+
+                    <div class="container">
+
+                        <h1 class="titles">ENLACES</h1>
+
+                        <br><br><br><br>
+
+                        <div class="row">
+
+                            <div class="col-sm-6 logo-sn">
+
+                                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7Jfspkw6p9zkwxVktPtXFx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                            </div>
+
+                            <div class="col-sm-6 text-start">
+
+                                <p>Enlaces es un dúo de alternative rock instrumental de Santiago de Chile formado por Fabián Demiurge y Luckas Carte. Con influencias del post-rock y el math-rock, su sonido busca conectar experiencias y emociones a través de riffs y melodías cargadas de energía.</p>
+
                             </div>
 
                         </div>
 
-                        <div class="col">
+                        <br><br><br><br>
 
-                            <div class="card text-bg-dark">
-                                <a href="" class="clickable-img scale">
-                                <img src="https://i.scdn.co/image/ab67616d0000b27330dc8425cd185efd935a02d4" class="card-img" alt="Enlaces - Entre árboles y frecuencias">
-                                <div class="card-img-overlay">
-                                <p class="card-text">Enlaces</p>
-                                <p class="card-text"><small>Entre árboles y frecuencias</small></p>
-                                <p class="card-text"><small>Diciembre, 2021</small></p>
-                                </div>
-                                </a>
+                        <h1 class="titles">Entre árboles y frecuencias</h1>
+
+                        <br><br><br><br>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/bRqKvKGq6aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                             </div>
-                        </div>
 
-                        <div class="col">
+                            <div class="col-sm-6">
 
-                            <div class="card text-bg-dark">
-                                <a href="" class="clickable-img scale">
-                                <img src="https://i.scdn.co/image/ab67616d0000b27330dc8425cd185efd935a02d4" class="card-img" alt="Enlaces - Entre árboles y frecuencias">
-                                <div class="card-img-overlay">
-                                <p class="card-text">Enlaces</p>
-                                <p class="card-text"><small>Entre árboles y frecuencias</small></p>
-                                <p class="card-text"><small>Diciembre, 2021</small></p>
-                                </div>
-                                </a>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/hvOXPEVXKrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                             </div>
 
                         </div>
 
-                        <div class="col">
+                        <br>
 
-                            <div class="card text-bg-dark">
-                                <a href="" class="clickable-img scale">
-                                <img src="https://i.scdn.co/image/ab67616d0000b27330dc8425cd185efd935a02d4" class="card-img" alt="Enlaces - Entre árboles y frecuencias">
-                                <div class="card-img-overlay">
-                                <p class="card-text">Enlaces</p>
-                                <p class="card-text"><small>Entre árboles y frecuencias</small></p>
-                                <p class="card-text"><small>Diciembre, 2021</small></p>
-                                </div>
-                                </a>
-                            </div>
-
-                        </div>
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3y0ck2AcUj7pYkG6eqlTX4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
                     </div>
 
@@ -146,13 +203,68 @@
             
         </main>
 
+        <br><br><br><br>
+
         <!--FOOTER-->
         <footer>
 
             <div id="footer">
-                <p>Demiurge Records 2023 © Todos los derechos reservados.</p>
-            </div>
+                
+                <div class="container text-center text-md-start mt-5">
+                
+                    <!--FILA-->
+                    <div class="row mt-3">
 
+                        <!--COLUMNA 1, LOGO-->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                            <img class="about-img" src="../img/LOGO CUADRADO 1.1.png" alt="Isotipo de Demiurge Records">
+
+                        </div>
+                
+                        <!--COLUMNA 2, SITIO-->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">SITIO</h6>
+                            <p><a href="./sobreNosotros.html" class="text-reset">Sobre nosotros</a></p>
+                            <p><a href="./servicios.html" class="text-reset">Servicios</a></p>
+                            <p><a href="./proyectos.html" class="text-reset">Proyectos</a></p>
+                            <p><a href="./contacto.html" class="text-reset">Contacto</a></p>
+
+                        </div>
+                
+                        <!--COLUMNA 3, REDES-->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">NUESTRAS REDES</h6>
+                            <p><a href="https://www.facebook.com/DemiurgeRecords/" class="text-reset">Facebook</a></p>
+                            <p><a href="https://www.instagram.com/demiurgerecords/" class="text-reset">Instagram</a></p>
+                            <p><a href="https://www.youtube.com/DemiurgeRecords" class="text-reset">YouTube</a></p>
+                            <p><a href="https://soundcloud.com/DemiurgeRecords" class="text-reset">SoundCloud</a></p>
+
+                        </div>
+                
+                        <!--COLUMNA 4, CONTACTO-->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                            <h6 class="text-uppercase fw-bold mb-4">CONTACTO</h6>
+                            <p><i class="fas fa-home me-3"></i>Santiago, Chile</p>
+                            <p><i class="fas fa-home me-3"></i>+56 9 9847 5716</p>
+                            <p><i class="fas fa-envelope me-3"></i>demiurge.records@outlook.com</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--COPYRIGHT-->
+                <br><div class="text-center p-4">
+                    Demiurge Records 2023 © Todos los derechos reservados.
+                </div>
+
+            </div>
+        
         </footer>
 
     </div>
