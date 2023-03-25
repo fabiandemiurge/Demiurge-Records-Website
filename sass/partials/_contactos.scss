@@ -1,0 +1,43 @@
+@import 'variables';
+
+/*Mobile first*/
+
+/*Clases*/
+.img-contact{
+    padding-top: 2rem;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    text-align: left;
+}
+
+.form-control {
+    height: 4rem;
+}
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    .img-contact{
+        padding-top: 0;
+    }
+    
+    .btn-form{
+        display: flex;
+        justify-content: left;
+    }
+
+    .formulario {
+        text-align: left;
+    }
+
+    .form-control {
+        height: 4rem;
+    }
+
+}

@@ -1,0 +1,51 @@
+@import 'variables';
+
+/*Mobile first*/
+
+/*Clases*/
+.artist-section{
+    text-align: center;
+}
+
+.releases-carrousel{
+    background-color: #f8f8f8;
+}
+
+.carrousel-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    .clickable-img {
+        color: rgba(234, 240, 246, 0);
+            &:hover{
+                color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+    }
+    
+    .scale{
+        transition: all 0.5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+    }
+
+    .artist-section{
+        text-align: center;
+    }
+
+    .releases-carrousel{
+        background-color: #f8f8f8;
+    }
+
+    .carrousel-grid{
+        display: flex;
+    }
+
+}

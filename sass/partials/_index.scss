@@ -1,0 +1,36 @@
+@import 'variables';
+
+/*Mobile first*/
+
+/*Clases*/
+
+.separator-bar {
+    border-top: 5px solid $dr-yellow;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    width: 30%;
+    margin: auto;
+    opacity: 100%;
+}
+
+.banner-img {
+    max-width: 100%;
+    width: 100vw;
+}
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    .separator-bar {
+        border-top: 10px solid $dr-yellow;
+        width: 20%;
+        opacity: 100%;
+    }
+
+    .banner-img {
+        max-width: 100%;
+        width: 100vw;
+    }
+
+}

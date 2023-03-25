@@ -1,0 +1,267 @@
+@import 'variables';
+/*Mobile first*/
+
+html {
+    font-size: 62.5%;
+}
+
+/*Reset*/
+
+@mixin css-reset($margin, $padding, $text-decoration, $font-family, $font-size, $box-sizing){
+    margin: $margin;
+    padding: $padding;
+    text-decoration: $text-decoration;
+    font-family: $font-family;
+    font-size: $font-size;
+    box-sizing: $box-sizing;
+}
+
+* {
+    @include css-reset(0, 0, none, $dr-font, 1rem, border-box)
+}
+
+/*IDS*/
+
+#footer {
+    text-align: center;
+    color: gray;
+    background-color: #f8f8f8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*Etiquetas*/
+
+a {
+    text-decoration: none;
+    color: black;
+        &:hover{
+            color:gray;
+        }
+}
+
+button {
+    background-color: $dr-yellow;
+    padding: 1rem;
+    border-radius: 8px;
+    border-style: none;
+    font-weight: bold;
+        &:hover{
+            background-color: gray;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+}
+
+li {
+    text-decoration: none;
+    display: inline;
+    margin: 1rem;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    grid-area: header;
+    max-width: 100%;
+    z-index: 1;
+}
+
+main{
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*Clases*/
+
+@mixin text-titles($size, $weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.titles {
+@include text-titles(1.7rem, bold)
+}
+
+.seccion {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.selected-page {
+    font-weight: bold;
+}
+
+.navbar {
+background-color: white;
+padding: 2rem;
+}
+
+.navbar-toggler{
+    border: none;
+        &:hover{
+            background-color: white;
+        }
+        &:focus{
+            background-color: white;
+            box-shadow: none;
+        }
+}
+
+.navbar-toggler-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav-link{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.navbar-nav {
+    position: end;
+}
+
+.card {
+    border: none;
+}
+
+.page-banner {
+    background-image: url(../img/PAGE-BANNER.jpg);
+    height: 10rem;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    color: white;
+}
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 62.5%;
+    }
+    
+    /*Reset*/
+
+    * {
+        @include css-reset(0, 0, none, $dr-font, 1.7rem, border-box)
+    }
+    
+    /*IDS*/
+    #footer {
+        text-align: center;
+        color: gray;
+        background-color: #f8f8f8;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    #grid_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    
+    /* etiqueta .*/
+    a {
+        text-decoration: none;
+        color: black;
+            &:hover{
+                color: gray;
+            }
+    }
+    
+    button {
+        background-color: $dr-yellow;
+        padding: 1.7rem;
+        border-radius: 8px;
+        border-style: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+            &:hover{
+                background-color: gray;
+                color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+    }
+    
+    li {
+        text-decoration: none;
+        display: inline;
+        margin: 1rem;
+    }
+    
+    header {
+        position: sticky;
+        top: 0px;
+        width: 100vw;
+        grid-area: header;
+        max-width: 100%;
+    }
+    
+    main{
+        grid-area: main;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+    
+    /*Clases*/
+    
+    .titles {
+    @include text-titles(2.5rem, bold)
+    }
+
+    .seccion {
+        text-align: center;
+        padding: 7rem 15rem;
+    }
+    
+    .selected-page {
+        font-weight: bold;
+    }
+
+    .navbar {
+        background-color: white;
+        padding: 4rem;
+        }
+
+    .nav-link{
+        font-size: 1.7rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        border: none;
+    }
+
+    .page-banner {
+        background-image: url(../img/PAGE-BANNER.jpg);
+        height: 20rem;
+        display: grid;
+        text-align: center;
+        align-items: center;
+        width: 100vw;
+        max-width: 100%;
+        color: white;
+    }
+}

@@ -1,0 +1,37 @@
+@import 'variables';
+
+/*Mobile first*/
+
+/*Clases*/
+.titles-sn{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.logo-sn{
+    padding-bottom: 2rem;
+}
+
+.about-img{
+    width: 30%;
+}
+
+/*Desktop view*/
+@media screen and (min-width: 768px) {
+
+    .titles-sn{
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .logo-sn{
+        padding-bottom: 0;
+    }
+
+    .about-img{
+        width: 50%;
+    }
+
+}
